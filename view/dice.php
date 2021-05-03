@@ -6,26 +6,33 @@
 
 declare(strict_types=1);
 
-use Webbprogrammering\Dice\Dice;
-use Webbprogrammering\Dice\DiceHand;
-
 $header = $header ?? null;
 $message = $message ?? null;
-
-$die = new Dice();
-$die->roll();
-
-$diceHand = new DiceHand();
-$diceHand->roll();
 
 ?><h1><?= $header ?></h1>
 
 <p><?= $message ?></p>
 
-<p>Dice is New</p>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
 
-<p><?= $die->getLastRoll() ?></p>
+<p class="dice-utf8">
+<?php foreach ($hand as $value) : ?>
+    <i class="<?= $value ?>"></i>
 
-<p>DiceHand</p>
-<p><?= $diceHand->getLastRoll() ?></p>
+<?php endforeach; ?>
+</p>
 
+<p>Your Points: <?= isset($_SESSION['total_points']) ? $_SESSION['total_points'] : 0 ?></p>
+
+<?php if (isset($_SESSION['computer_points'])) : ?>
+    <p>Computer Points: <?= $_SESSION['computer_points'] ?></p>
+<?php endif; ?>
+
+<?php if ($_SESSION['show_buttons'] === true) : ?>
+<form method="POST" action="<?= $action; ?>">
+    <input type="submit" name="roll_again" value="Roll Again" />
+    <input type="submit" name="computer_play" value="Stop & Computer Play" />
+</form>
+
+<?php endif; ?>

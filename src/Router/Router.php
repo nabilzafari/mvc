@@ -22,8 +22,8 @@ class Router
     {
         if ($method === "GET" && $path === "/") {
             $data = [
-                "header" => "Index page",
-                "message" => "Hello, this is the index page, rendered as a layout.",
+                "header" => "Nabil Zafari",
+                "message" => "Wellcome to Nabil Zafari's webpage for course MVC.",
             ];
             $body = renderView("layout/page.php", $data);
             sendResponse($body);
@@ -35,6 +35,10 @@ class Router
         } else if ($method === "GET" && $path === "/session/destroy") {
             destroySession();
             redirectTo(url("/session"));
+            return;
+        } else if ($method === "GET" && $path === "/results/destroy") {
+            destroySession();
+            redirectTo(url("/results"));
             return;
         } else if ($method === "GET" && $path === "/debug") {
             $body = renderView("layout/debug.php");
@@ -56,16 +60,56 @@ class Router
             $body = renderView("layout/page.php", $data);
             sendResponse($body);
             return;
+        } else if ($method === "GET" && $path === "/results") {
+            $callable = new\Webbprogrammering\Dice\Game();
+            $callable->results();
+            return;
+            $body = renderView("layout/results.php");
+            sendResponse($body);
+            return;
         } else if ($method === "GET" && $path === "/dice") {
+            $callable = new\Webbprogrammering\Dice\Game();
+            $callable->playGame();
+            return;
+        } else if ($method === "POST" && $path === "/dice") {
+            $callable = new\Webbprogrammering\Dice\Game();
+            if (!empty($_POST['computer_play']))
+                $callable->computerGame();
+            else $callable->playGame();
+                return;
+        } else if ($method === "GET" && $path === "/form/view") {
+            unset($_SESSION['total_points']);
+            unset($_SESSION['computer_points']);
+            if (!isset($_SESSION['show_buttons']) || $_SESSION['show_buttons'] === false) {
+                $_SESSION['show_buttons'] = true;
+            }
             $data = [
-                "header" => "Dice",
-                "message" => "Hey, Dice is here!",
+                "header" => "Game 21",
+                "message" => "How many dice you want to roll? ",
+                "action" => url("/form/process"),
+                "output" => $_SESSION["output"] ?? null,
+                "total_points" => $_SESSION['total_points'] ?? 0
             ];
-            $body = renderView("layout/dice.php", $data);
+            $body = renderView("layout/form.php", $data);
+            sendResponse($body);
+            return;
+        } else if ($method === "POST" && $path === "/form/process") {
+            if (in_array($_POST["content"], [1,2])) {
+                $_SESSION["output"] = (int) $_POST["content"];
+                redirectTo(url("/dice"));
+                return;
+            }
+            // Not 1 or 2
+            $data = [
+                "header" => "Game 21",
+                "message" => "Please enter either 1 or 2 ",
+                "action" => url("/form/process"),
+                "output" => $_SESSION["output"] ?? null,
+            ];
+            $body = renderView("layout/form.php", $data);
             sendResponse($body);
             return;
         }
-
         $data = [
             "header" => "404",
             "message" => "The page you are requesting is not here. You may also checkout the HTTP response code, it should be 404.",

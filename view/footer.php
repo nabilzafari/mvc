@@ -1,6 +1,6 @@
 </main>
 <footer>
-    <p>This is the footer.</p>
+    <p>Copyright © Nabil Zafari</p>
 </footer>
 </body>
 </html>

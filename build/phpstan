@@ -1,0 +1,58 @@
+ ------ -------------------------------------------------------------------------------------------------------------------- 
+  Line   src/Dice/Dice.php                                                                                                   
+ ------ -------------------------------------------------------------------------------------------------------------------- 
+         ParseError (syntax error, unexpected '?', expecting function (T_FUNCTION) or const (T_CONST)) thrown while looking  
+         for class Webbprogrammering\Dice\Dice.                                                                              
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                  
+ ------ -------------------------------------------------------------------------------------------------------------------- 
+
+ ------ -------------------------------------------------------------------------------------------------------------------- 
+  Line   src/Dice/DiceHand.php                                                                                               
+ ------ -------------------------------------------------------------------------------------------------------------------- 
+         ParseError (syntax error, unexpected 'array' (T_ARRAY), expecting function (T_FUNCTION) or const (T_CONST)) thrown  
+         while looking for class Webbprogrammering\Dice\DiceHand.                                                            
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                  
+ ------ -------------------------------------------------------------------------------------------------------------------- 
+
+ ------ -------------------------------------------------------------------------------------------------------------------- 
+  Line   src/Dice/Game.php                                                                                                   
+ ------ -------------------------------------------------------------------------------------------------------------------- 
+         ParseError (syntax error, unexpected '?', expecting function (T_FUNCTION) or const (T_CONST)) thrown while looking  
+         for class Webbprogrammering\Dice\GraphicalDice.                                                                     
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                  
+  14     ParseError (syntax error, unexpected '?', expecting function (T_FUNCTION) or const (T_CONST)) thrown while looking  
+         for class Webbprogrammering\Dice\Dice.                                                                              
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                  
+  15     ParseError (syntax error, unexpected 'array' (T_ARRAY), expecting function (T_FUNCTION) or const (T_CONST)) thrown  
+         while looking for class Webbprogrammering\Dice\DiceHand.                                                            
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                  
+  16     ParseError (syntax error, unexpected '?', expecting function (T_FUNCTION) or const (T_CONST)) thrown while looking  
+         for class Webbprogrammering\Dice\GraphicalDice.                                                                     
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                  
+ ------ -------------------------------------------------------------------------------------------------------------------- 
+
+ ------ -------------------------------------------------------------------------------------------------------------------- 
+  Line   src/Dice/GraphicalDice.php                                                                                          
+ ------ -------------------------------------------------------------------------------------------------------------------- 
+         ParseError (syntax error, unexpected '?', expecting function (T_FUNCTION) or const (T_CONST)) thrown while looking  
+         for class Webbprogrammering\Dice\GraphicalDice.                                                                     
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                  
+  7      ParseError (syntax error, unexpected '?', expecting function (T_FUNCTION) or const (T_CONST)) thrown while looking  
+         for class Webbprogrammering\Dice\Dice.                                                                              
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols                                                  
+ ------ -------------------------------------------------------------------------------------------------------------------- 
+
+ ------ -------------------------------------------------------------------- 
+  Line   src/Router/Router.php                                               
+ ------ -------------------------------------------------------------------- 
+  64     Function Mos\Router\new\Webbprogrammering\Dice\Game not found.      
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  67     Unreachable statement - code above always terminates.               
+  71     Function Mos\Router\new\Webbprogrammering\Dice\Game not found.      
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+  75     Function Mos\Router\new\Webbprogrammering\Dice\Game not found.      
+         💡 Learn more at https://phpstan.org/user-guide/discovering-symbols  
+ ------ -------------------------------------------------------------------- 
+
+ [ERROR] Found 12 errors                                                                                                
+

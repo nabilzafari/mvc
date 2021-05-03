@@ -17,8 +17,7 @@ namespace Webbprogrammering\Dice;
  * Class DiceHand.
  */
 class DiceHand
-{   
-
+{
 
     private array $dices;
     private int $sum;
@@ -26,8 +25,7 @@ class DiceHand
     public function __construct()
     {
         for ($i = 0; $i <= 3; $i++) {
-            $this->dices[$i] = new Dice;
-
+            $this->dices[$i] = new Dice();
         }
     }
 
@@ -38,19 +36,15 @@ class DiceHand
         $this->sum = 0;
         for ($i = 0; $i <= 3; $i++) {
             $this->sum += $this->dices[$i] ->roll();
-
         }
     }
-
 
     public function getLastRoll(): string
     {
         $res = "";
         for ($i = 0; $i <= 3; $i++) {
             $res .= $this->dices[$i]->getLastRoll() . ", ";
-
         }
-        return $res . " = " . $this->sum;
+        return "Sum of Dices: " . $res . " = " . $this->sum;
     }
-
 }
