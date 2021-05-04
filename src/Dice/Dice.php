@@ -20,7 +20,7 @@ class Dice
 {
     const FACES = 6;
 
-    private ?int $roll = null;
+    private int $roll = 0;
 
     public function roll(): int
     {

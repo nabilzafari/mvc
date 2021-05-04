@@ -1,21 +1,23 @@
 
 FILE: /Users/nabilzafari/dbwebb-kurser/mvc/me/game/src/Dice/Game.php
----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
 FOUND 1 ERROR AFFECTING 1 LINE
----------------------------------------------------------------------------------------------------
- 14 | ERROR | The class-based use imports must follow the namespace declaration in the file header
----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------
+ 16 | ERROR | [x] Header blocks must be separated by a single blank line
+-------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-------------------------------------------------------------------------
 
 
 FILE: /Users/nabilzafari/dbwebb-kurser/mvc/me/game/src/Router/Router.php
 ------------------------------------------------------------------------
 FOUND 2 ERRORS AFFECTING 2 LINES
 ------------------------------------------------------------------------
- 76 | ERROR | [x] Inline control structures are not allowed
- 78 | ERROR | [x] Inline control structures are not allowed
+ 86 | ERROR | [x] Inline control structures are not allowed
+ 88 | ERROR | [x] Inline control structures are not allowed
 ------------------------------------------------------------------------
 PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
 ------------------------------------------------------------------------
 
-Time: 600ms; Memory: 8MB
+Time: 533ms; Memory: 8MB
 

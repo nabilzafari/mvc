@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Mos\Router;
 
+use Webprogramming\Dice\Game;
+
 use function Mos\Functions\{
     destroySession,
     redirectTo,
@@ -60,19 +62,27 @@ class Router
             $body = renderView("layout/page.php", $data);
             sendResponse($body);
             return;
+        } else if ($method === "GET" && $path === "/yatzy") {
+            $data = [
+                "header" => "Nabil Zafari",
+                "message" => "Wellcome to Nabil Zafari's webpage for course MVC.",
+            ];
+            $body = renderView("layout/page.php", $data);
+            sendResponse($body);
+            return;
         } else if ($method === "GET" && $path === "/results") {
-            $callable = new\Webbprogrammering\Dice\Game();
+            $callable = new \Webbprogrammering\Dice\Game();
             $callable->results();
             return;
             $body = renderView("layout/results.php");
             sendResponse($body);
             return;
         } else if ($method === "GET" && $path === "/dice") {
-            $callable = new\Webbprogrammering\Dice\Game();
+            $callable = new \Webbprogrammering\Dice\Game();
             $callable->playGame();
             return;
         } else if ($method === "POST" && $path === "/dice") {
-            $callable = new\Webbprogrammering\Dice\Game();
+            $callable = new \Webbprogrammering\Dice\Game();
             if (!empty($_POST['computer_play']))
                 $callable->computerGame();
             else $callable->playGame();

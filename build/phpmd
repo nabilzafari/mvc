@@ -1,6 +1,7 @@
 /Users/nabilzafari/dbwebb-kurser/mvc/me/game/src/Dice/DiceHand.php:34	Avoid unused local variables such as '$len'.
-/Users/nabilzafari/dbwebb-kurser/mvc/me/game/src/Dice/Game.php:62	The method computerGame() has a Cyclomatic Complexity of 12. The configured cyclomatic complexity threshold is 10.
-/Users/nabilzafari/dbwebb-kurser/mvc/me/game/src/Router/Router.php:21	The method dispatch() has a Cyclomatic Complexity of 29. The configured cyclomatic complexity threshold is 10.
-/Users/nabilzafari/dbwebb-kurser/mvc/me/game/src/Router/Router.php:64	Missing class import via use statement (line '64', column '28').
-/Users/nabilzafari/dbwebb-kurser/mvc/me/game/src/Router/Router.php:71	Missing class import via use statement (line '71', column '28').
-/Users/nabilzafari/dbwebb-kurser/mvc/me/game/src/Router/Router.php:75	Missing class import via use statement (line '75', column '28').
+/Users/nabilzafari/dbwebb-kurser/mvc/me/game/src/Dice/Game.php:64	The method computerGame() has a Cyclomatic Complexity of 12. The configured cyclomatic complexity threshold is 10.
+/Users/nabilzafari/dbwebb-kurser/mvc/me/game/src/Router/Router.php:23	The method dispatch() has a Cyclomatic Complexity of 31. The configured cyclomatic complexity threshold is 10.
+/Users/nabilzafari/dbwebb-kurser/mvc/me/game/src/Router/Router.php:23	The method dispatch() has 107 lines of code. Current threshold is set to 100. Avoid really long methods.
+/Users/nabilzafari/dbwebb-kurser/mvc/me/game/src/Router/Router.php:74	Missing class import via use statement (line '74', column '29').
+/Users/nabilzafari/dbwebb-kurser/mvc/me/game/src/Router/Router.php:81	Missing class import via use statement (line '81', column '29').
+/Users/nabilzafari/dbwebb-kurser/mvc/me/game/src/Router/Router.php:85	Missing class import via use statement (line '85', column '29').

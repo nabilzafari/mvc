@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace Webbprogrammering\Dice;
 
+use Webbprogrammering\Dice\Dice;
+use Webbprogrammering\Dice\DiceHand;
+use Webbprogrammering\Dice\GraphicalDice;
+
 use function Mos\Functions\{
     redirectTo,
     renderView,
@@ -11,9 +15,7 @@ use function Mos\Functions\{
     url
 };
 
-use Webbprogrammering\Dice\Dice;
-use Webbprogrammering\Dice\DiceHand;
-use Webbprogrammering\Dice\GraphicalDice;
+
 
 /**
  * Class Game.
